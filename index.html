@@ -745,7 +745,7 @@
       transform: translateY(0);
     }
 
-    /* الصفحة الثانية: العداد والصور القديمة */
+    /* الصفحة الثانية: العداد */
     .counter-page {
       position: fixed;
       top: 0; right: 0; bottom: 0; left: 0;
@@ -885,7 +885,6 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
       flex-shrink: 0;
     }
-
 
     @supports (-webkit-touch-callout: none) {
       .counter-box, .pro-audio-player, .final-wish-card {
@@ -1122,196 +1121,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* صندوق "أول مرة أقول فيها بحبك" */
-    .love-fact-box {
-      width: 92vw;
-      max-width: 390px;
-      margin-top: 14px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: linear-gradient(145deg, rgba(74, 9, 18, 0.62) 0%, rgba(26, 2, 6, 0.86) 100%);
-      border: 1px solid rgba(232, 188, 155, 0.42);
-      box-shadow:
-        0 10px 24px rgba(0, 0, 0, 0.6),
-        inset 0 1px 1px rgba(255, 235, 220, 0.15);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      direction: rtl;
-      flex-shrink: 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .love-fact-box::before {
-      content: "";
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: radial-gradient(circle at 80% 15%, rgba(230, 178, 154, 0.12), transparent 60%);
-      pointer-events: none;
-    }
-
-    .love-fact-check {
-      width: 24px;
-      height: 24px;
-      border-radius: 7px;
-      background: linear-gradient(135deg, #7c111c 0%, #46050d 100%);
-      border: 1px solid rgba(232, 188, 155, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-      margin-top: 3px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .love-fact-check svg {
-      width: 14px;
-      height: 14px;
-      stroke: var(--rose-gold-light);
-      stroke-width: 3;
-      fill: none;
-    }
-
-    .love-fact-text {
-      font-family: 'Cairo', sans-serif;
-      font-size: 0.86rem;
-      font-weight: 600;
-      color: var(--rose-gold-light);
-      line-height: 1.65;
-      text-align: right;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-divider {
-      width: 88vw;
-      max-width: 360px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin: 28px 0 22px;
-      flex-shrink: 0;
-    }
-
-    .divider-line {
-      flex: 1;
-      height: 1.5px;
-      background: linear-gradient(90deg, transparent, rgba(232, 188, 155, 0.65), transparent);
-    }
-
-    .divider-icon {
-      color: var(--rose-gold-mid);
-      font-size: 1.15rem;
-      filter: drop-shadow(0 0 8px rgba(230, 178, 154, 0.5));
-      animation: sealSlowPulse 3.6s ease-in-out infinite;
-    }
-
-    .our-photos-title {
-      font-family: 'Cairo', sans-serif;
-      font-weight: 800;
-      font-size: 2rem;
-      color: var(--rose-gold-light);
-      margin-bottom: 22px;
-      text-align: center;
-      text-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.85),
-        0 0 22px rgba(218, 52, 72, 0.35);
-      letter-spacing: 0.03em;
-      flex-shrink: 0;
-    }
-
-    .photos-list {
-      width: 92vw;
-      max-width: 370px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .photo-card {
-      width: 100%;
-      background: linear-gradient(155deg, rgba(78, 9, 19, 0.78) 0%, rgba(28, 2, 6, 0.92) 100%);
-      border: 1px solid rgba(232, 188, 155, 0.45);
-      border-radius: 18px;
-      padding: 12px 12px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow:
-        0 16px 34px rgba(0, 0, 0, 0.75),
-        inset 0 1px 1px rgba(255, 235, 220, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      position: relative;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(38px) scale(0.94);
-      transition:
-        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 0.35s ease;
-    }
-
-    .photo-card.revealed {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .photo-card::before {
-      content: "";
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(251, 227, 216, 0.14), transparent 65%);
-      pointer-events: none;
-    }
-
-    .photo-frame {
-      width: 100%;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(232, 188, 155, 0.3);
-      background: rgba(17, 1, 3, 0.6);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    .photo-caption {
-      margin-top: 12px;
-      font-family: 'Cairo', 'Amiri', sans-serif;
-      font-size: 2.15rem;
-      font-weight: 800;
-      color: var(--gold-bright);
-      text-align: center;
-      line-height: 1.2;
-      text-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.85),
-        0 0 18px rgba(230, 178, 154, 0.38);
-    }
-
-    .photo-card.final-love-card .photo-caption {
-      font-size: 2.35rem;
-      color: #f8d8c9;
-      background: linear-gradient(115deg, #fff5ef 0%, #f8d8c9 35%, #e2a185 70%, #fff5ef 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.8));
-    }
-
     .final-surprise-wrap {
       margin-top: 32px;
       display: flex;
@@ -1471,7 +1280,6 @@
       .counter-grid { gap: 8px; }
       .counter-box { padding: 10px 4px; }
       .counter-num { font-size: 1.85rem; }
-      .love-fact-text { font-size: 0.8rem; }
     }
 
     @media (max-height: 680px) {
@@ -1729,7 +1537,7 @@
       </form>
     </section>
 
-    <!-- الصفحة الثانية: العداد والصور القديمة الأصلية -->
+    <!-- الصفحة الثانية: العداد -->
     <section class="counter-page" id="counterPage" aria-hidden="true">
       <h2 class="for-you-title">FOR YOU</h2>
       <p class="counter-subtitle">كل لحظة معاكي هي عمر جديد ♥️</p>
@@ -1857,8 +1665,9 @@
       const openCounterBtn = document.getElementById('openCounterBtn');
       const counterPage = document.getElementById('counterPage');
 
-      const FULL_MESSAGE = "انتي مش متخيله انتي عندي ايه انتي احن و اطيب قلب و اعظم انسانه في الدنيا كلها انتي الامان و الحنان و كل حاجه حلوه في حياتي ربنا يديمك في حياتي احسن حاجه حصلت في الدنيا دايما مفرحاني و مخلياني طاير من الفرحه واحنا سوا و بنتكلم عيونك بتخليني احس بالحب اللي جواكي لو فضلت باصصلك سنين حياتي الجايه مش هزهق ابدا بجد انا بحبك اكتر من نفسي و بحبك اكتر حاجه في العالم محدش هيحبك قدي في الدنيا انا مكتفي بيكي و موافق افضل معاكي بس لو مقفول علينا حتي مش عايز حد في العالم غيرك انتي مفيش زيك و مجاش في حياتي زيك ولا قابلت ولا هقابل ولا عايز اقابل حد بعدك مهما اتكلمت و وصفتلك انتي عارفه اللي جوايا و عارفه ان اي كلام قولته مش هيكفي حبي ليكي ولا هعرف اوصفه اصلا انتي حياتي اللي فاتت و اللي جايه و كل سنين عمري ❤️❤️
-بحبك يا كل العالم 🌏❤️";
+      // تم إصلاح كسر السطر هنا بإضافة \n حتى لا يتوقف السكريبت
+      const FULL_MESSAGE = "انتي مش متخيله انتي عندي ايه انتي احن و اطيب قلب و اعظم انسانه في الدنيا كلها انتي الامان و الحنان و كل حاجه حلوه في حياتي ربنا يديمك في حياتي احسن حاجه حصلت في الدنيا دايما مفرحاني و مخلياني طاير من الفرحه واحنا سوا و بنتكلم عيونك بتخليني احس بالحب اللي جواكي لو فضلت باصصلك سنين حياتي الجايه مش هزهق ابدا بجد انا بحبك اكتر من نفسي و بحبك اكتر حاجه في العالم محدش هيحبك قدي في الدنيا انا مكتفي بيكي و موافق افضل معاكي بس لو مقفول علينا حتي مش عايز حد في العالم غيرك انتي مفيش زيك و مجاش في حياتي زيك ولا قابلت ولا هقابل ولا عايز اقابل حد بعدك مهما اتكلمت و وصفتلك انتي عارفه اللي جوايا و عارفه ان اي كلام قولته مش هيكفي حبي ليكي ولا هعرف اوصفه اصلا انتي حياتي اللي فاتت و اللي جايه و كل سنين عمري ❤️❤️\nبحبك يا كل العالم 🌏❤️";
+
       const typedTextEl = document.getElementById('typedText');
       const typingCursor = document.getElementById('typingCursor');
       const skipTypingBtn = document.getElementById('skipTypingBtn');
@@ -2151,7 +1960,6 @@
     })();
   </script>
 
-
   <!-- HeartLink image compatibility fallback -->
   <script>
     (function () {
@@ -2162,7 +1970,7 @@
         if (!original || /^(data:|blob:)/i.test(original)) return;
         const candidates = [
           'https://wsrv.nl/?url=' + encodeURIComponent(original.replace(/^https:/i, 'http:')),
-          'https://i0.wp.com/' + original.replace(/^https?:\\/\\//i, '')
+          'https://i0.wp.com/' + original.replace(/^https?:\/\//i, '')
         ];
         seen.add(img);
         let index = 0;
@@ -2173,7 +1981,7 @@
       }
       document.querySelectorAll('img').forEach(function (img) {
         const original = img.getAttribute('src');
-        if (original && !/^(data:|blob:|https?:\\/\\/wsrv\\.nl\\/)/i.test(original)) {
+        if (original && !/^(data:|blob:|https?:\/\/wsrv\.nl\/)/i.test(original)) {
           proxyImage(img);
         } else {
           img.addEventListener('error', function () { proxyImage(img); }, { once: true });
